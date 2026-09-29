@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cambios de Carrera</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow">
+        <a href="index.html" class="text-indigo-600 text-sm font-semibold hover:underline">&larr; Volver al Home</a>
+        <h2 class="text-2xl font-bold text-gray-800 mt-4 mb-6">Solicitud de Cambio de Carrera</h2>
+        
+        <form id="formCambio" class="space-y-4">
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Matrícula del Alumno</label>
+                <input type="text" id="matricula" required class="w-full mt-1 p-2 border rounded-md focus:ring focus:ring-indigo-300">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Carrera Actual</label>
+                <input type="text" id="carreraActual" required class="w-full mt-1 p-2 border rounded-md focus:ring focus:ring-indigo-300">
+            </div>
+            <div>
+                <label class="block text-sm font-medium text-gray-700">Nueva Carrera Deseada</label>
+                <select id="nuevaCarrera" class="w-full mt-1 p-2 border rounded-md focus:ring focus:ring-indigo-300">
+                    <option value="Ing. en Desarrollo y Gestión de Software">Ing. en Desarrollo y Gestión de Software</option>
+                    <option value="Ing. en Redes Inteligentes y Ciberseguridad">Ing. en Redes Inteligentes y Ciberseguridad</option>
+                    <option value="Lic. en Administración y Gestión">Lic. en Administración y Gestión</option>
+                </select>
+            </div>
+            <button type="submit" class="w-full bg-indigo-600 text-white p-2 rounded-md hover:bg-indigo-700 transition">Enviar Solicitud</button>
+        </form>
+        <div id="mensaje" class="mt-4 text-center font-semibold text-sm"></div>
+    </div>
+
+    <script>
+        document.getElementById('formCambio').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const mat = document.getElementById('matricula').value;
+            const nueva = document.getElementById('nuevaCarrera').value;
+            const msg = document.getElementById('mensaje');
+            
+            msg.textContent = `¡Solicitud registrada con éxito para la matrícula ${mat} hacia ${nueva}!`;
+            msg.className = "mt-4 text-center font-semibold text-sm text-green-600";
+            this.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,1 +1,13 @@
 
+        document.getElementById('formCarrera').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const carrera = document.getElementById('nombreCarrera').value;
+            const plan = document.getElementById('planEstudio').value;
+
+            const contenedor = document.getElementById('contenedorCarreras');
+            const div = document.createElement('div');
+            div.className = "p-4 border rounded bg-gray-50 flex justify-between items-center";
+            div.innerHTML = `<div><h4 class="font-bold text-gray-800">${carrera}</h4><p class="text-sm text-gray-600">Plan de Estudio: ${plan}</p></div><button onclick="this.closest('div').remove()" class="text-red-600 text-sm hover:underline">Eliminar</button>`;
+            contenedor.appendChild(div);
+            this.reset();
+        });

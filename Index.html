@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión Institucional - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <!-- Navbar -->
+    <nav class="bg-indigo-700 p-4 text-white shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold">Portal Institucional - Control Escolar</h1>
+            <span class="text-sm bg-indigo-800 px-3 py-1 rounded-full">Panel Administrativo</span>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="container mx-auto mt-10 px-4 pb-12">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-gray-800">Bienvenido al Sistema de Gestión Académica</h2>
+            <p class="text-gray-600 mt-2">Selecciona un módulo para administrar la información institucional.</p>
+        </div>
+
+        <!-- Tarjetas de Módulos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Apartado 1 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-t-4 border-indigo-500">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Cambios de Carrera</h3>
+                <p class="text-gray-600 text-sm mb-4">Gestiona y solicita cambios de programa educativo con validación en JavaScript.</p>
+                <a href="cambios-carrera.html" class="inline-block bg-indigo-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-indigo-700 transition">Acceder</a>
+            </div>
+
+            <!-- Apartado 2 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-t-4 border-blue-500">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">CRUD Calificaciones Parciales</h3>
+                <p class="text-gray-600 text-sm mb-4">Registro, modificación y consulta de calificaciones por periodo parcial.</p>
+                <a href="calificaciones-parciales.html" class="inline-block bg-blue-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-blue-700 transition">Acceder</a>
+            </div>
+
+            <!-- Apartado 3 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-t-4 border-green-500">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">CRUD Materias</h3>
+                <p class="text-gray-600 text-sm mb-4">Administración del catálogo de asignaturas, créditos y asignación de áreas.</p>
+                <a href="materias.html" class="inline-block bg-green-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-green-700 transition">Acceder</a>
+            </div>
+
+            <!-- Apartado 4 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-t-4 border-yellow-500">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">CRUD Carreras y Planes</h3>
+                <p class="text-gray-600 text-sm mb-4">Gestión de programas educativos y estructuración de sus planes de estudio.</p>
+                <a href="carreras-planes.html" class="inline-block bg-yellow-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-yellow-700 transition">Acceder</a>
+            </div>
+
+            <!-- Apartado 5 -->
+            <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition border-t-4 border-purple-500">
+                <h3 class="text-xl font-bold text-gray-800 mb-2">Carreras y Nivel Académico</h3>
+                <p class="text-gray-600 text-sm mb-4">Consulta general de la oferta educativa clasificada por nivel académico.</p>
+                <a href="carreras-nivel.html" class="inline-block bg-purple-600 text-white text-sm font-semibold px-4 py-2 rounded hover:bg-purple-700 transition">Acceder</a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-4 border-t text-sm text-gray-500">
+        &copy; 2026 Institución Educativa. Todos los derechos reservados.
+    </footer>
+
+</body>
+</html>
